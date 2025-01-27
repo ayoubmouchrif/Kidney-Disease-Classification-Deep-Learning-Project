@@ -838,3 +838,11 @@ Traceback (most recent call last):
     raise IOError(
 OSError: No file or directory found at model\model.h5
 [2025-01-28 00:19:22,594: INFO: _internal: 127.0.0.1 - - [28/Jan/2025 00:19:22] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-01-28 00:22:49,822: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.10:8080]
+[2025-01-28 00:22:49,822: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-01-28 00:22:59,164: INFO: _internal: 127.0.0.1 - - [28/Jan/2025 00:22:59] "GET / HTTP/1.1" 200 -]
+[2025-01-28 00:23:17,030: INFO: _internal: 127.0.0.1 - - [28/Jan/2025 00:23:17] "POST /predict HTTP/1.1" 200 -]
+[2025-01-28 00:23:33,211: INFO: _internal: 127.0.0.1 - - [28/Jan/2025 00:23:33] "POST /predict HTTP/1.1" 200 -]
