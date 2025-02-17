@@ -846,3 +846,54 @@ OSError: No file or directory found at model\model.h5
 [2025-01-28 00:22:59,164: INFO: _internal: 127.0.0.1 - - [28/Jan/2025 00:22:59] "GET / HTTP/1.1" 200 -]
 [2025-01-28 00:23:17,030: INFO: _internal: 127.0.0.1 - - [28/Jan/2025 00:23:17] "POST /predict HTTP/1.1" 200 -]
 [2025-01-28 00:23:33,211: INFO: _internal: 127.0.0.1 - - [28/Jan/2025 00:23:33] "POST /predict HTTP/1.1" 200 -]
+[2025-02-02 09:48:50,566: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.13:8080]
+[2025-02-02 09:48:50,568: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-02-02 09:49:09,394: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:49:09] "GET / HTTP/1.1" 200 -]
+[2025-02-02 09:50:13,996: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:50:13] "POST /predict HTTP/1.1" 200 -]
+[2025-02-02 09:50:28,170: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:50:28] "POST /predict HTTP/1.1" 200 -]
+[2025-02-02 09:50:34,909: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:50:34] "POST /predict HTTP/1.1" 200 -]
+[2025-02-02 09:50:48,142: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:50:48] "POST /predict HTTP/1.1" 200 -]
+[2025-02-02 09:53:26,775: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.13:8080]
+[2025-02-02 09:53:26,776: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-02-02 09:53:30,054: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:53:30] "GET / HTTP/1.1" 200 -]
+[2025-02-02 09:53:45,390: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:53:45] "POST /predict HTTP/1.1" 200 -]
+[2025-02-02 09:54:17,243: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:54:17] "POST /predict HTTP/1.1" 200 -]
+[2025-02-02 09:55:01,290: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.13:8080]
+[2025-02-02 09:55:01,291: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-02-02 09:55:06,640: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:55:06] "GET / HTTP/1.1" 200 -]
+[2025-02-02 09:55:15,007: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\RENTO\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\RENTO\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\RENTO\anaconda3\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\RENTO\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\RENTO\anaconda3\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\RENTO\anaconda3\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\rento\desktop\mlops_pfa\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 19, in predict
+    test_image = image.load_img(imagename, target_size = (224,224))
+  File "C:\Users\RENTO\anaconda3\envs\kidney\lib\site-packages\keras\src\utils\image_utils.py", line 423, in load_img
+    img = pil_image.open(io.BytesIO(f.read()))
+  File "C:\Users\RENTO\anaconda3\envs\kidney\lib\site-packages\PIL\Image.py", line 3498, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000020DD69F8B30>
+[2025-02-02 09:55:15,025: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:55:15] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-02-02 09:55:27,894: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:55:27] "GET / HTTP/1.1" 200 -]
+[2025-02-02 09:55:43,682: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:55:43] "POST /predict HTTP/1.1" 200 -]
+[2025-02-02 09:55:57,301: INFO: _internal: 127.0.0.1 - - [02/Feb/2025 09:55:57] "POST /predict HTTP/1.1" 200 -]
